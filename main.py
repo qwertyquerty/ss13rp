@@ -10,7 +10,7 @@ while 1:
         rp.connect()
         break
     except:
-        time.sleep(300)
+        time.sleep(60)
 
 
 
@@ -36,7 +36,7 @@ def get_server():
         tid, current_pid = win32process.GetWindowThreadProcessId(hwnd)
         if pid == current_pid:
             windows.append(hwnd)
-            
+
     windows = []
     win32gui.EnumWindows(enum_window_callback, p.pid)
     window = str([win32gui.GetWindowText(item) for item in windows if ":" in win32gui.GetWindowText(item)][0])
