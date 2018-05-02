@@ -4,18 +4,17 @@ import win32gui
 import win32process
 import psutil
 
-while 1:
+while True:
     try:
-        rp=pypresence.Presence("440289271580983308")
+        rp = pypresence.Presence("440289271580983308")
         rp.connect()
         break
     except:
         time.sleep(60)
 
 
-
 servers = {
-    "Goonstation #2": ["Goonstation #2","goonhub"],
+    "Goonstation #2": ["Goonstation #2", "goonhub"],
     "Goonstation RP #1": ["Goonstation RP #1", "goonhub"],
     "Yogstation 13 [99% LAGFREE!]": ["Yogstation 13", "yogstation"],
     "BeeStation - Newbie Friendly!": ["BeeStation", "ss13"],
@@ -27,10 +26,12 @@ servers = {
     "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"]
 }
 
+
 def get_server():
 
-    p = [proc for proc in psutil.process_iter() if proc.name() == "dreamseeker.exe"]
-    p=p[0]
+    p = [proc for proc in psutil.process_iter() if proc.name() ==
+         "dreamseeker.exe"]
+    p = p[0]
 
     def enum_window_callback(hwnd, pid):
         tid, current_pid = win32process.GetWindowThreadProcessId(hwnd)
@@ -39,20 +40,34 @@ def get_server():
 
     windows = []
     win32gui.EnumWindows(enum_window_callback, p.pid)
-    window = str([win32gui.GetWindowText(item) for item in windows if ":" in win32gui.GetWindowText(item)][0])
-    if not window=="Space Station 13" and not window=="BYOND: Your Game Is Starting":
+    window = str([win32gui.GetWindowText(item)
+                  for item in windows if ":" in win32gui.GetWindowText(item)][0])
+    if not window == "Space Station 13" and not window == "BYOND: Your Game Is Starting":
         for i in servers.keys():
             if window.startswith(i):
                 return servers[i]
     else:
-        server="ss13"
+        server = "ss13"
         return servers[server]
 
-while 1:
+
+while True:
     try:
         server = get_server()
-        rp.update(state=server[0], large_text=server[0], large_image=server[1])
+        rp.update(
+            state=server[0],
+            large_text=server[0],
+            large_image=server[1])
         time.sleep(15)
     except Exception as e:
-        rp.clear()
-        time.sleep(5)
+        try:
+            rp.clear()
+            time.sleep(5)
+        except Exception as e:
+            while True:
+                try:
+                    rp = pypresence.Presence("440289271580983308")
+                    rp.connect()
+                    break
+                except:
+                    time.sleep(30)
