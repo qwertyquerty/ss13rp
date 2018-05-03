@@ -23,29 +23,47 @@ servers = {
     "Hippie Station": ["Hippie Station", "hippiestation"],
     "/tg/Station Bagil": ["Station Bagil", "tgstation"],
     "/tg/Station Sybil": ["Station Sybil", "tgstation"],
-    "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"]
+    "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"],
+    "[ss13.ru] Yellow Circus": ["Yellow Circus", "ss13"],
+    "Persistence Station 13": ["Persistence Station", "persistence"]
 }
+
+
+def get_hwnds_for_pid (pid):
+  def callback (hwnd, hwnds):
+    if win32gui.IsWindowVisible (hwnd) and win32gui.IsWindowEnabled (hwnd):
+      _, found_pid = win32process.GetWindowThreadProcessId (hwnd)
+      if found_pid == pid:
+        hwnds.append (hwnd)
+    return True
+
+  hwnds = []
+  win32gui.EnumWindows (callback, hwnds)
+  return hwnds
+
 
 
 def get_server():
 
     p = [proc for proc in psutil.process_iter() if proc.name() ==
          "dreamseeker.exe"]
+
     p = p[0]
 
-    def enum_window_callback(hwnd, pid):
-        tid, current_pid = win32process.GetWindowThreadProcessId(hwnd)
-        if pid == current_pid:
-            windows.append(hwnd)
+    windows=get_hwnds_for_pid(p.pid)
 
-    windows = []
-    win32gui.EnumWindows(enum_window_callback, p.pid)
-    window = str([win32gui.GetWindowText(item)
-                  for item in windows if ":" in win32gui.GetWindowText(item)][0])
-    if not window == "Space Station 13" and not window == "BYOND: Your Game Is Starting":
-        for i in servers.keys():
-            if window.startswith(i):
-                return servers[i]
+
+    windowtitles = [i for i in [str(win32gui.GetWindowText(item))
+                  for item in windows] if i != ""]
+
+
+    for title in windowtitles:
+        if not title == "Space Station 13":
+            for i in servers.keys():
+                if title.startswith(i):
+
+                    return servers[i]
+
     else:
         server = "ss13"
         return servers[server]
@@ -54,10 +72,7 @@ def get_server():
 while True:
     try:
         server = get_server()
-        rp.update(
-            state=server[0],
-            large_text=server[0],
-            large_image=server[1])
+        rp.update(state=server[0],large_text=server[0],large_image=server[1])
         time.sleep(15)
     except Exception as e:
         try:
