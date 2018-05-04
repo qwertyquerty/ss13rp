@@ -32,3 +32,4 @@ Download the installer [here](https://github.com/qwertyquerty/ss13rp/raw/master/
 - [x] Successfully prove to people that it is not a virus (although they still wont believe you)
 - [ ] Add map name to presence
 - [ ] Add round time to presence
+- [ ] Add management menu (maybe)
