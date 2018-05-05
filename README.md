@@ -1,7 +1,7 @@
 # ss13rp
 Rich Presence for the game Space Station 13!
 
-![https://i.imgur.com/ekxN8PX.png]()
+![https://i.imgur.com/ekxN8PX.png](https://i.imgur.com/ekxN8PX.png)
 
 ---
 
