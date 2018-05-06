@@ -18,9 +18,10 @@ if "join" in sys.argv:
 else:
 
     while True:
+
         try:
-            rp = pypresence.Presence("440289271580983308")
-            rp.connect()
+            rp = pypresence.Client("440289271580983308")
+            rp.start()
             break
         except:
             time.sleep(60)
@@ -38,7 +39,8 @@ else:
         "/tg/Station Sybil": ["Station Sybil", "tgstation"],
         "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"],
         "[ss13.ru] Yellow Circus": ["Yellow Circus", "ss13"],
-        "Persistence Station 13": ["Persistence Station", "persistence"]
+        "Persistence Station 13": ["Persistence Station", "persistence"],
+        "Lebensraum Alpha": ["Lebensraum Alpha", "ss13"]
     }
 
 
@@ -68,7 +70,7 @@ else:
 
         windowtitles = [i for i in [str(win32gui.GetWindowText(item))
                       for item in windows] if i != ""]
-
+        print(windowtitles)
 
         for title in windowtitles:
             if not title == "Space Station 13":
@@ -85,18 +87,19 @@ else:
     while True:
         try:
             server = get_server()
-            rp.update(state=server[0],large_text=server[0],large_image=server[1])
+            rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
             time.sleep(15)
         except Exception as e:
             print(e)
             try:
-                rp.clear()
+                rp.clear_activity()
                 time.sleep(5)
             except Exception as e:
+                print(e)
                 while True:
                     try:
-                        rp = pypresence.Presence("440289271580983308")
-                        rp.connect()
+                        rp = pypresence.Client("440289271580983308")
+                        rp.start()
                         break
                     except:
                         time.sleep(30)
