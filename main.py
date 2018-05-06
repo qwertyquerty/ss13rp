@@ -39,6 +39,7 @@ else:
         "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"],
         "[ss13.ru] Yellow Circus": ["Yellow Circus", "ss13"],
         "Persistence Station 13": ["Persistence Station", "persistence"]
+        "Apollo Gaming SS13": ["Apollo Gaming","apollo"]
     }
 
 
