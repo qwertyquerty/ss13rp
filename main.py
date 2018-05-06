@@ -39,11 +39,10 @@ else:
         "/tg/Station Sybil": ["Station Sybil", "tgstation"],
         "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"],
         "[ss13.ru] Yellow Circus": ["Yellow Circus", "ss13"],
-        "Persistence Station 13": ["Persistence Station", "persistence"]
-        "Apollo Gaming SS13": ["Apollo Gaming","apollo"]
+        "Persistence Station 13": ["Persistence Station", "persistence"],
+        "Apollo Gaming": ["Apollo Gaming","apollo"],
         "Lebensraum Alpha": ["Lebensraum Alpha", "ss13"],
         "Baystation 12": ["Baystation 12", "bs12"]
-
     }
 
 
