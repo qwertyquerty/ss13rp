@@ -5,6 +5,8 @@ Rich Presence for the game Space Station 13!
 
 ![https://i.imgur.com/ekxN8PX.png](https://i.imgur.com/ekxN8PX.png)
 
+[My Discord Server](https://discord.gg/d7dH65)
+
 ---
 
 ## Installation
