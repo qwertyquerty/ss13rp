@@ -42,7 +42,11 @@ else:
         "Persistence Station 13": ["Persistence Station", "persistence"],
         "Apollo Gaming": ["Apollo Gaming","apollo"],
         "Lebensraum Alpha": ["Lebensraum Alpha", "ss13"],
-        "Baystation 12": ["Baystation 12", "bs12"]
+        "Baystation 12": ["Baystation 12", "bs12"],
+        "Fortification 12": ["FTL13", "ftl13"],
+        "Tool Box Station": ["Toolbox Station", "toolbox"],
+        "Pressurized Roleplay": ["Pressurized Roleplay", "pressure"],
+        "StarTrek13": ["Star Trek 13", "startrek"]
     }
 
 
