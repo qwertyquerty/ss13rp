@@ -46,7 +46,10 @@ else:
         "Fortification 12": ["FTL13", "ftl13"],
         "Tool Box Station": ["Toolbox Station", "toolbox"],
         "Pressurized Roleplay": ["Pressurized Roleplay", "pressure"],
-        "StarTrek13": ["Star Trek 13", "startrek"]
+        "StarTrek13": ["Star Trek 13", "startrek"],
+        "Polaris Station 13": ["Polaris Station", "polaris"],
+        "Paradise Station 13": ["Paradise Station", "paradise"],
+        "Aurora Station": ["Aurora Station", "ss13"]
     }
 
 
