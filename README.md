@@ -1,11 +1,11 @@
 # ss13rp
-Rich Presence for the game Space Station 13!
+Rich Presence for the game Space Station 13! 
 
 [![Download](https://creativebeacon.com/wp-content/uploads/2013/04/download_btn.png)](https://github.com/qwertyquerty/ss13rp/raw/master/dist/install.exe)
 
 ![https://i.imgur.com/ekxN8PX.png](https://i.imgur.com/ekxN8PX.png)
 
-[My Discord Server](https://discord.gg/d7dH65) | [My Patreon (pls)](https://www.patreon.com/qwertyquerty)
+[My Discord Server](https://discordapp.com/invite/uV5y7RY) | [My Patreon (pls pls pls)](https://www.patreon.com/qwertyquerty)
 
 ---
 
