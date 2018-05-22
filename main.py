@@ -4,6 +4,8 @@ import win32gui
 import win32process
 import psutil
 import sys
+import util
+import time
 
 if "join" in sys.argv:
     print("joining game...")
@@ -28,8 +30,8 @@ else:
 
 
     servers = {
-        "Goonstation #2": ["Goonstation #2", "goonhub"],
-        "Goonstation RP #1": ["Goonstation RP #1", "goonhub"],
+        "Goonstation #2": ["Goonstation #2", "goonhub", "goon2.goonhub.com", 26200],
+        "Goonstation RP #1": ["Goonstation RP #1", "goonhub", "goon1.goonhub.com", 26100],
         "Yogstation 13 [99% LAGFREE!]": ["Yogstation 13", "yogstation"],
         "BeeStation - Newbie Friendly!": ["BeeStation", "ss13"],
         "ss13": ["Unknown Server", "ss13"],
@@ -96,7 +98,22 @@ else:
     while True:
         try:
             server = get_server()
-            rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
+            if len(server) == 4:
+                try:
+                    status = util.fetch(server[2], server[3], "status")
+                    #print(status)
+                    details = status["map_name"]+" | "+str(status["players"])+" players"
+                    if status["shuttle_time"] != 'welp' and status["shuttle_time"] != '600':
+                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]), end=int(time.time())+int(status["shuttle_time"]))
+                    else:
+                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
+
+                except Exception as E:
+                    #print(E)
+                    rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
+            else:
+                rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
+
             time.sleep(15)
         except Exception as e:
             print(e)

@@ -28,14 +28,15 @@ Download the installer [here](https://github.com/qwertyquerty/ss13rp/raw/master/
 - [x] Fixed the thing that would make any byond game appear as ss13
 - [x] Add Persistence server
 - [ ] Fetch server from IP instead of window title
-- [ ] Add Aurora server
-- [ ] Add Paradise server
+- [x] Add Aurora server
+- [x] Add Paradise server
 - [ ] Add CM server
 - [x] Add a bunch more smaller servers
 - [ ] Finish ask to join, and join through message
 - [ ] Finish spectate for servers that support it (ghost mode)
 - [ ] Add an auto game register on installation
 - [x] Successfully prove to people that it is not a virus (although they still wont believe you)
-- [ ] Add map name to presence
-- [ ] Add round time to presence
+- [x] Add map name to presence
+- [x] Add round time to presence
+- [x] Add player count to presence
 - [ ] Add management menu (maybe)
