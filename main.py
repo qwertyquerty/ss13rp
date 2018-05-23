@@ -35,7 +35,7 @@ else:
         "Yogstation 13 [99% LAGFREE!]": ["Yogstation 13", "yogstation"],
         "BeeStation - Newbie Friendly!": ["BeeStation", "ss13"],
         "ss13": ["Unknown Server", "ss13"],
-        "Oracle Station | Medium RP": ["Oracle Station", "oraclestation"],
+        "Oracle Station | Medium RP": ["Oracle Station", "oraclestation", "byond.oraclestation.com", 5000],
         "Hippie Station": ["Hippie Station", "hippiestation"],
         "/tg/Station Bagil": ["Station Bagil", "tgstation"],
         "/tg/Station Sybil": ["Station Sybil", "tgstation"],
@@ -51,7 +51,8 @@ else:
         "StarTrek13": ["Star Trek 13", "startrek"],
         "Polaris Station 13": ["Polaris Station", "polaris"],
         "Paradise Station 13": ["Paradise Station", "paradise"],
-        "Aurora Station": ["Aurora Station", "ss13"]
+        "Aurora Station": ["Aurora Station", "ss13"],
+        "VOREStation": ["VOREStation", "ss13"]
     }
 
 
@@ -103,10 +104,13 @@ else:
                     status = util.fetch(server[2], server[3], "status")
                     #print(status)
                     details = status["map_name"]+" | "+str(status["players"])+" players"
-                    if status["shuttle_time"] != 'welp' and status["shuttle_time"] != '600':
-                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]), end=int(time.time())+int(status["shuttle_time"]))
+                    if server[0] in ["Goonstation #2","Goonstation RP #1"]:
+                        if status["shuttle_time"] != 'welp' and status["shuttle_time"] != '600':
+                            rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]), end=int(time.time())+int(status["shuttle_time"]))
+                        else:
+                            rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
                     else:
-                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
+                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1])
 
                 except Exception as E:
                     #print(E)

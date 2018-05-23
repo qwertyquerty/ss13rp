@@ -19,3 +19,4 @@ def fetch(addr, port, querystr):
 
     parsed_data = urllib.parse.parse_qs(data[5:-1].decode())
     return {i:parsed_data[i][0] for i in parsed_data.keys()}
+#print(fetch("sybil.aws.tgstation13.org", 44150, "status"))
