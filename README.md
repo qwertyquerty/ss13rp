@@ -1,5 +1,5 @@
 # ss13rp
-Rich Presence for the game Space Station 13! 
+Rich Presence for the game Space Station 13!
 
 [![Download](https://creativebeacon.com/wp-content/uploads/2013/04/download_btn.png)](https://github.com/qwertyquerty/ss13rp/raw/master/dist/install.exe)
 
@@ -20,6 +20,7 @@ Download the installer [here](https://github.com/qwertyquerty/ss13rp/raw/master/
 ## Images
 
 ![https://i.imgur.com/wbyIiAb.png](https://i.imgur.com/wbyIiAb.png) ![https://i.imgur.com/8xQndG8.png](https://i.imgur.com/8xQndG8.png)
+![https://i.imgur.com/dnAVF05.png](https://i.imgur.com/dnAVF05.png)
 
 ---
 
