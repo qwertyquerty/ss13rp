@@ -21,6 +21,9 @@ Download the installer [here](https://github.com/qwertyquerty/ss13rp/raw/master/
 
 ![https://i.imgur.com/wbyIiAb.png](https://i.imgur.com/wbyIiAb.png) ![https://i.imgur.com/8xQndG8.png](https://i.imgur.com/8xQndG8.png)
 ![https://i.imgur.com/dnAVF05.png](https://i.imgur.com/dnAVF05.png)
+![https://i.imgur.com/TmcdOb5.png](https://i.imgur.com/TmcdOb5.png)
+![https://i.imgur.com/kOR5Z4E.png](https://i.imgur.com/kOR5Z4E.png)
+![https://i.imgur.com/encF83m.png](https://i.imgur.com/encF83m.png)
 
 ---
 
