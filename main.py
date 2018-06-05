@@ -33,7 +33,7 @@ else:
         "Goonstation #2": ["Goonstation #2", "goonhub", "goon2.goonhub.com", 26200],
         "Goonstation RP #1": ["Goonstation RP #1", "goonhub", "goon1.goonhub.com", 26100],
         "Yogstation 13 [99% LAGFREE!]": ["Yogstation 13", "yogstation"],
-        "BeeStation - Newbie Friendly!": ["BeeStation", "ss13"],
+        "BeeStation 13": ["BeeStation", "beestation", "198.58.107.171", 3333],
         "ss13": ["Unknown Server", "ss13"],
         "Oracle Station | Medium RP": ["Oracle Station", "oraclestation", "byond.oraclestation.com", 5000],
         "Hippie Station": ["Hippie Station", "hippiestation"],
@@ -109,11 +109,17 @@ else:
                             rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]), end=int(time.time())+int(status["shuttle_time"]))
                         else:
                             rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
+
+                    elif server[0] in ["BeeStation"]:
+                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["round_duration"]))
+
+
                     else:
                         rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1])
 
+
                 except Exception as E:
-                    #print(E)
+                    print(E)
                     rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
             else:
                 rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
