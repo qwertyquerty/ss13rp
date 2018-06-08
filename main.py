@@ -45,7 +45,7 @@ else:
         "Apollo Gaming": ["Apollo Gaming","apollo"],
         "Lebensraum Alpha": ["Lebensraum Alpha", "ss13"],
         "Baystation 12": ["Baystation 12", "bs12"],
-        "Fortification 12": ["FTL13", "ftl13"],
+        "FTL13": ["FTL13", "ftl13", "ftl13.com", 7777],
         "Tool Box Station": ["Toolbox Station", "toolbox"],
         "Pressurized Roleplay": ["Pressurized Roleplay", "pressure"],
         "StarTrek13": ["Star Trek 13", "startrek"],
@@ -110,7 +110,7 @@ else:
                         else:
                             rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
 
-                    elif server[0] in ["BeeStation"]:
+                    elif server[0] in ["BeeStation", "FTL13"]:
                         rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["round_duration"]))
 
 
