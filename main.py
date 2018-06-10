@@ -39,6 +39,7 @@ else:
         "Hippie Station": ["Hippie Station", "hippiestation"],
         "/tg/Station Bagil": ["Station Bagil", "tgstation"],
         "/tg/Station Sybil": ["Station Sybil", "tgstation"],
+        "/tg/Station Terry": ["Station Terry", "tgstation"],
         "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"],
         "[ss13.ru] Yellow Circus": ["Yellow Circus", "ss13"],
         "Persistence Station 13": ["Persistence Station", "persistence"],
