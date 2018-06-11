@@ -37,9 +37,9 @@ else:
         "ss13": ["Unknown Server", "ss13"],
         "Oracle Station | Medium RP": ["Oracle Station", "oraclestation", "byond.oraclestation.com", 5000],
         "Hippie Station": ["Hippie Station", "hippiestation"],
-        "/tg/Station Bagil": ["Station Bagil", "tgstation"],
-        "/tg/Station Sybil": ["Station Sybil", "tgstation"],
-        "/tg/Station Terry": ["Station Terry", "tgstation"],
+        "/tg/Station Bagil": ["Station Bagil", "tgstation", "bagil.aws.tgstation13.org", 2337],
+        "/tg/Station Sybil": ["Station Sybil", "tgstation", "sybil.aws.tgstation13.org", 1337],
+        "/tg/Station Terry": ["Station Terry", "tgstation", "terry.tgstation13.org", 3337],
         "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"],
         "[ss13.ru] Yellow Circus": ["Yellow Circus", "ss13"],
         "Persistence Station 13": ["Persistence Station", "persistence"],
@@ -100,6 +100,7 @@ else:
     while True:
         try:
             server = get_server()
+            print(server)
             if len(server) == 4:
                 try:
                     status = util.fetch(server[2], server[3], "status")
@@ -111,7 +112,7 @@ else:
                         else:
                             rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
 
-                    elif server[0] in ["BeeStation", "FTL13"]:
+                    elif server[0] in ["BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil"]:
                         rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["round_duration"]))
 
 
