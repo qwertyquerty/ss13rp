@@ -53,8 +53,8 @@ else:
         "Polaris Station 13": ["Polaris Station", "polaris"],
         "Paradise Station 13": ["Paradise Station", "paradise"],
         "Aurora Station": ["Aurora Station", "ss13"],
-        "VOREStation": ["VOREStation", "citadel"],
-        "Citadel Station 13": ["Citadel Station", "citadel"]
+        "VOREStation": ["VOREStation", "citadel", "citadel-station.net", 44150],
+        "Citadel Station 13": ["Citadel Station", "citadel", "citadel-station.net", 44130]
     }
 
 
@@ -113,7 +113,7 @@ else:
                         else:
                             rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
 
-                    elif server[0] in ["BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil"]:
+                    elif server[0] in ["BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station"]:
                         rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["round_duration"]))
 
 
