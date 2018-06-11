@@ -53,7 +53,7 @@ else:
         "Polaris Station 13": ["Polaris Station", "polaris"],
         "Paradise Station 13": ["Paradise Station", "paradise"],
         "Aurora Station": ["Aurora Station", "ss13"],
-        "VOREStation": ["VOREStation", "ss13"]
+        "VOREStation": ["VOREStation", "citadel"]
     }
 
 
