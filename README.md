@@ -5,6 +5,8 @@ Rich Presence for the game Space Station 13!
 
 ![https://i.imgur.com/ekxN8PX.png](https://i.imgur.com/ekxN8PX.png)
 
+If you want sPeCiAl SuPpOrT feel free to contact me:
+
 [My Discord Server](https://discordapp.com/invite/uV5y7RY) | [My Patreon (pls pls pls)](https://www.patreon.com/qwertyquerty)
 
 ---
