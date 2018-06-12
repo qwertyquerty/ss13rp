@@ -35,7 +35,7 @@ else:
         "Yogstation 13 [99% LAGFREE!]": ["Yogstation 13", "yogstation"],
         "BeeStation 13": ["BeeStation", "beestation", "198.58.107.171", 3333],
         "ss13": ["Unknown Server", "ss13"],
-        "Oracle Station | Medium RP": ["Oracle Station", "oraclestation", "byond.oraclestation.com", 5000],
+        "Oracle Station | Medium RP": ["Oracle Station", "oraclestation"], #"byond.oraclestation.com", 5000
         "Hippie Station": ["Hippie Station", "hippiestation"],
         "/tg/Station Bagil": ["Station Bagil", "tgstation", "bagil.aws.tgstation13.org", 2337],
         "/tg/Station Sybil": ["Station Sybil", "tgstation", "sybil.aws.tgstation13.org", 1337],
