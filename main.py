@@ -113,10 +113,10 @@ else:
                     #print(status)
                     if server[0] in ["Baystation 12"]:
                         details = status["map"]+" | "+str(status["players"])+" players"
-                    elif server[0] in ["Goonstation #2","Goonstation RP #1"]:
+                    elif server[0] in ["Goonstation #2","Goonstation RP #1", "BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station"]:
                         details = status["map_name"]+" | "+str(status["players"])+" players"
 
-                    if server[0] in ["Goonstation #2","Goonstation RP #1", "BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station"]:
+                    if server[0] in ["Goonstation #2","Goonstation RP #1"]:
                         if status["shuttle_time"] != 'welp' and status["shuttle_time"] != '600':
                             rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]), end=int(time.time())+int(status["shuttle_time"]))
                         else:
