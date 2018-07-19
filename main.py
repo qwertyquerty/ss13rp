@@ -46,7 +46,7 @@ else:
         "Persistence Station 13": ["Persistence Station", "persistence"],
         "Apollo Gaming": ["Apollo Gaming","apollo"],
         "Lebensraum Alpha": ["Lebensraum Alpha", "ss13"],
-        "Baystation 12": ["Baystation 12", "bs12", "https://baystation12.net/status.dat", 80, "http"],
+        "Baystation 12": ["Baystation 12", "bs12", "play.baystation12.net", 8000, "fetch"],
         "FTL13": ["FTL13", "ftl13", "ftl13.com", 7777, "fetch"],
         "Tool Box Station": ["Toolbox Station", "toolbox"],
         "Pressurized Roleplay": ["Pressurized Roleplay", "pressure"],
