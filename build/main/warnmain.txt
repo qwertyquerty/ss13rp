@@ -1,0 +1,61 @@
+missing module named 'multiprocessing.forking' - imported by c:\users\isaac\appdata\local\programs\python\python36-32\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
+missing module named multiprocessing.get_context - imported by multiprocessing, multiprocessing.pool, multiprocessing.managers, multiprocessing.sharedctypes
+missing module named multiprocessing.TimeoutError - imported by multiprocessing, multiprocessing.pool
+missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
+missing module named multiprocessing.set_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named multiprocessing.get_start_method - imported by multiprocessing, multiprocessing.spawn
+missing module named multiprocessing.SimpleQueue - imported by multiprocessing, concurrent.futures.process
+missing module named resource - imported by posix, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named posix - imported by os, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named _posixsubprocess - imported by subprocess, multiprocessing.util, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named readline - imported by cmd, code, pdb, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named _winreg - imported by platform, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named 'java.lang' - imported by platform, C:\Users\Isaac\Desktop\programs\ss13rp\main.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named termios - imported by tty, getpass, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named urllib.proxy_bypass - imported by urllib, requests.compat
+missing module named urllib.getproxies - imported by urllib, requests.compat
+missing module named urllib.urlencode - imported by urllib, requests.compat
+missing module named urllib.unquote_plus - imported by urllib, requests.compat
+missing module named urllib.quote_plus - imported by urllib, requests.compat
+missing module named urllib.unquote - imported by urllib, asn1crypto._iri, requests.compat
+missing module named urllib.quote - imported by urllib, asn1crypto._iri, requests.compat
+missing module named grp - imported by shutil, tarfile, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named _dummy_threading - imported by dummy_threading, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named 'org.python' - imported by copy, C:\Users\Isaac\Desktop\programs\ss13rp\main.py, xml.sax
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, psutil, netrc, getpass, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+missing module named org - imported by pickle, C:\Users\Isaac\Desktop\programs\ss13rp\main.py
+runtime module named requests.packages.urllib3.packages.six.moves - imported by http.client, requests.packages.urllib3.connectionpool, requests.packages.urllib3.util.response, 'requests.packages.urllib3.packages.six.moves.urllib', requests.packages.urllib3.response
+missing module named "'requests.packages.urllib3.packages.six.moves.urllib'.parse" - imported by requests.packages.urllib3.request, requests.packages.urllib3.poolmanager
+missing module named Queue - imported by requests.packages.urllib3.connectionpool, urllib3.connectionpool
+missing module named 'backports.ssl_match_hostname' - imported by requests.packages.urllib3.packages.ssl_match_hostname, urllib3.packages.ssl_match_hostname
+missing module named _abcoll - imported by requests.packages.urllib3.packages.ordered_dict, urllib3.packages.ordered_dict
+missing module named dummy_thread - imported by requests.packages.urllib3.packages.ordered_dict, urllib3.packages.ordered_dict
+missing module named thread - imported by requests.packages.urllib3.packages.ordered_dict, urllib3.packages.ordered_dict
+missing module named StringIO - imported by requests.packages.urllib3.packages.six, urllib3.packages.six, six, requests.compat
+missing module named Cookie - imported by requests.compat
+missing module named cookielib - imported by requests.compat
+missing module named urllib2 - imported by requests.compat
+missing module named urlparse - imported by asn1crypto._iri, requests.compat
+missing module named simplejson - imported by requests.compat
+runtime module named urllib3.packages.six.moves - imported by http.client, urllib3.connectionpool, urllib3.util.response, 'urllib3.packages.six.moves.urllib', urllib3.response
+missing module named "'urllib3.packages.six.moves.urllib'.parse" - imported by urllib3.request, urllib3.poolmanager
+missing module named socks - imported by requests.packages.urllib3.contrib.socks
+missing module named 'OpenSSL.crypto' - imported by requests.packages.urllib3.contrib.pyopenssl
+runtime module named six.moves - imported by cryptography.x509.general_name
+missing module named UserDict - imported by asn1crypto._ordereddict
+missing module named cStringIO - imported by asn1crypto.core
+missing module named copy_reg - imported by cStringIO
+missing module named OpenSSL - imported by requests.packages.urllib3.contrib.pyopenssl
+missing module named psutil._psutil_sunos - imported by psutil, psutil._pssunos
+missing module named psutil._psutil_bsd - imported by psutil, psutil._psbsd
+missing module named psutil._psutil_osx - imported by psutil, psutil._psosx
+missing module named _psutil_linux - imported by psutil
+missing module named psutil._psutil_posix - imported by psutil, psutil._pslinux, psutil._psosx, psutil._psbsd, psutil._pssunos
+missing module named fcntl - imported by asyncio.unix_events
+missing module named asyncio.DefaultEventLoopPolicy - imported by asyncio, asyncio.events
