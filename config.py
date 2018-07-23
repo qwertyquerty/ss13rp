@@ -5,7 +5,7 @@ servers = {
     "BeeStation 13": ["BeeStation", "beestation", "198.58.107.171", 3333, "fetch"],
     "ss13": ["Unknown Server", "ss13"],
     "Oracle Station | Medium RP": ["Oracle Station", "oraclestation"], #"byond.oraclestation.com", 5000
-    "Hippie Station": ["Hippie Station", "hippiestation"],
+    "Hippie Station": ["Hippie Station", "hippiestation", "62.210.11.24", 1337, "fetch"],
     "/tg/Station Bagil": ["Station Bagil", "tgstation", "bagil.aws.tgstation13.org", 2337, "fetch"],
     "/tg/Station Sybil": ["Station Sybil", "tgstation", "sybil.aws.tgstation13.org", 1337, "fetch"],
     "/tg/Station Terry": ["Station Terry", "tgstation", "terry.tgstation13.org", 3337, "fetch"],
