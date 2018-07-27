@@ -1,7 +1,7 @@
 servers = {
     "Goonstation #2": ["Goonstation #2", "goonhub", "goon2.goonhub.com", 26200, "fetch"],
     "Goonstation RP #1": ["Goonstation RP #1", "goonhub", "goon1.goonhub.com", 26100, "fetch"],
-    "Yogstation 13 [99% LAGFREE!]": ["Yogstation 13", "yogstation"],
+    "Yogstation 13": ["Yogstation 13", "yogstation", "game.yogstation.net", 4133, "fetch"],
     "BeeStation 13": ["BeeStation", "beestation", "198.58.107.171", 3333, "fetch"],
     "ss13": ["Unknown Server", "ss13"],
     "Oracle Station | Medium RP": ["Oracle Station", "oraclestation"], #"byond.oraclestation.com", 5000
