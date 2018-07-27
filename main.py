@@ -22,7 +22,6 @@ if "join" in sys.argv:
 else:
 
     while True:
-
         try:
             rp = pypresence.Client(client_id)
             rp.start()
@@ -90,10 +89,8 @@ else:
 
                     elif server[0] in ["Goonstation #2","Goonstation RP #1", "Hippie Station", "BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station", "Yogstation 13"]:
                         details = status["map_name"]+" | "+str(status["players"])+" players"
-
                     if server[0] in ["Goonstation #2","Goonstation RP #1"]:
                         rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
-
                     elif server[0] in ["Hippie Station", "BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station", "Yogstation 13"]:
                         rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["round_duration"]))
 
@@ -103,7 +100,7 @@ else:
 
 
                 except Exception as E:
-
+                    print(E)
                     rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
             else:
                 rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
