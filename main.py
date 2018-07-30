@@ -7,6 +7,7 @@ import sys
 import util
 import requests
 import time
+import json
 from config import *
 
 if "join" in sys.argv:
@@ -82,7 +83,7 @@ else:
                     if server[4] == "fetch":
                         status = util.fetch(server[2], server[3], "status")
                     elif server[4] == "http":
-                        status = requests.get(server[2]).json()
+                        status = json.loads(requests.get(server[2]).content.decode('utf-8', 'ignore').strip().split("?status\x00")[1])
 
                     if server[0] in ["Baystation 12"]:
                         details = status["map"]+" | "+str(status["players"])+" players"
