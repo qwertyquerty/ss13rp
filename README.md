@@ -3,8 +3,6 @@ Rich Presence for the game Space Station 13!
 
 [My Discord Server](https://discordapp.com/invite/uV5y7RY) | [My Patreon (pls pls pls)](https://www.patreon.com/qwertyquerty)
 
-[![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/P5P3GHMZ)
-
 [![Download](https://creativebeacon.com/wp-content/uploads/2013/04/download_btn.png)](https://github.com/qwertyquerty/ss13rp/raw/master/dist/install.exe)
 
 ![https://i.imgur.com/ekxN8PX.png](https://i.imgur.com/ekxN8PX.png)
