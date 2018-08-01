@@ -9,6 +9,7 @@ servers = {
     "/tg/Station Bagil": ["Station Bagil", "tgstation", "bagil.aws.tgstation13.org", 2337, "fetch"],
     "/tg/Station Sybil": ["Station Sybil", "tgstation", "sybil.aws.tgstation13.org", 1337, "fetch"],
     "/tg/Station Terry": ["Station Terry", "tgstation", "terry.tgstation13.org", 3337, "fetch"],
+    "Lumina Station": ["Lumina Station", "lumen", "lumina.spaceball.cf", 4407, "fetch"],
     "[99% FREE LAG] Convict Conclave": ["Convict Conclave", "ss13"],
     "[ss13.ru] Yellow Circus": ["Yellow Circus", "ss13"],
     "Persistence Station 13": ["Persistence Station", "persistence"],
