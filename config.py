@@ -21,6 +21,7 @@ servers = {
     "StarTrek13": ["Star Trek 13", "startrek"],
     "Polaris Station 13": ["Polaris Station", "polaris"],
     "Paradise Station 13": ["Paradise Station", "paradise"],
+    "SCP-13": ["SCP-13", "scp13", "scp13.site", 106, "fetch"],
     "Aurora Station": ["Aurora Station", "ss13"],
     "VOREStation": ["VOREStation", "citadel", "citadel-station.net", 44150, "fetch"],
     "Citadel Station 13": ["Citadel Station", "citadel", "citadel-station.net", 44130, "fetch"],
