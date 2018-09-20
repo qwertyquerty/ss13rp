@@ -24,7 +24,7 @@ servers = {
     "Aurora Station": ["Aurora Station", "ss13"],
     "VOREStation": ["VOREStation", "citadel", "citadel-station.net", 44150, "fetch"],
     "Citadel Station 13": ["Citadel Station", "citadel", "citadel-station.net", 44130, "fetch"],
-    "Colonial Marines": ["Colonial Marines", "cm"]
+    "Sunset Station": ["SunsetStation", "sunset", "sunsetstation13.com", 3333, "fetch"]
 }
 
 
