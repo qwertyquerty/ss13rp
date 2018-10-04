@@ -8,11 +8,13 @@ import util
 import requests
 import time
 from config import *
+import webbrowser
 
 if "join" in sys.argv:
     print("joining game...")
     def join(ev):
-        print(ev)
+        ie = webbrowser.get(webbrowser.iexplore)
+        ie.open('google.com')
     rp = pypresence.Client(client_id)
     rp.start()
     print(rp.read())
@@ -75,10 +77,9 @@ else:
     while True:
         try:
             server = get_server()
-
+            activity = {"state": server[0], "large_text": server[0], "large_image":server[1]}
             if len(server) == 5:
                 try:
-
                     if server[4] == "fetch":
                         status = util.fetch(server[2], server[3], "status")
                     elif server[4] == "http":
@@ -88,22 +89,26 @@ else:
                         details = status["map"]+" | "+str(status["players"])+" players"
 
                     elif server[0] in ["Goonstation #2","Goonstation RP #1", "Hippie Station", "BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station", "Yogstation 13"]:
-                        details = status["map_name"]+" | "+str(status["players"])+" players"
+                        activity["details"] = status["map_name"]+" | "+str(status["players"])+" players"
+
                     if server[0] in ["Goonstation #2","Goonstation RP #1"]:
-                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["elapsed"]))
+                        activity["start"] = int(time.time())-int(status["elapsed"])
+
                     elif server[0] in ["Hippie Station", "BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station", "Yogstation 13"]:
-                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1], start=int(time.time())-int(status["round_duration"]))
-
-
-                    else:
-                        rp.set_activity(state=server[0],details=details,large_text=server[0],large_image=server[1])
-
+                        activity["start"] = int(time.time())-int(status["round_duration"])
 
                 except Exception as E:
-                    print(E)
-                    rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
-            else:
-                rp.set_activity(state=server[0],large_text=server[0],large_image=server[1])
+                    pass
+
+
+            #activity["party_id"] = "234412341"
+            #activity["join"] = "432452421342"
+            #activity["party_size"] = [1,4]
+            #activity["match"] = "23431234"
+            #activity["instance"] = True
+            #activity["spectate"] = "53242523421"
+
+            rp.set_activity(**activity)
 
             time.sleep(15)
 
