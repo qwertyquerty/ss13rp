@@ -1,5 +1,5 @@
 ('C:\\Users\\Isaac\\Desktop\\programs\\ss13rp\\dist\\install.exe',
- False,
+ True,
  False,
  False,
  'icon.ico',
@@ -109,7 +109,7 @@
  [],
  False,
  False,
- 1538620696,
- [('runw.exe',
-   'c:\\users\\isaac\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
+ 1538620983,
+ [('run.exe',
+   'c:\\users\\isaac\\appdata\\local\\programs\\python\\python36\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',
    'EXECUTABLE')])
