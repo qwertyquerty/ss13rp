@@ -9,7 +9,7 @@ Rich Presence for the game Space Station 13!
 
 If you want sPeCiAl SuPpOrT feel free to contact me:
 
-[My Discord Server](https://discordapp.com/invite/uV5y7RY)
+[My Dev Discord Server](https://discord.gg/JF3kg77)
 
 ---
 
