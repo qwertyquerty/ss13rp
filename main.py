@@ -1,20 +1,25 @@
-import pypresence
+import requests
+import sys
 import time
+import webbrowser
+
+import pypresence
+import psutil
 import win32gui
 import win32process
-import psutil
-import sys
-import util
-import requests
-import time
+
 from config import *
-import webbrowser
+import util
 
 if "join" in sys.argv:
     print("joining game...")
+
+
     def join(ev):
         ie = webbrowser.get(webbrowser.iexplore)
         ie.open('google.com')
+
+
     rp = pypresence.Client(client_id)
     rp.start()
     print(rp.read())
@@ -32,21 +37,17 @@ else:
             time.sleep(20)
 
 
+    def get_hwnds_for_pid(pid):
+        def callback(hwnd, hwnds):
+            if win32gui.IsWindowVisible(hwnd) and win32gui.IsWindowEnabled(hwnd):
+                _, found_pid = win32process.GetWindowThreadProcessId(hwnd)
+                if found_pid == pid:
+                    hwnds.append(hwnd)
+            return True
 
-
-
-    def get_hwnds_for_pid (pid):
-      def callback (hwnd, hwnds):
-        if win32gui.IsWindowVisible (hwnd) and win32gui.IsWindowEnabled (hwnd):
-          _, found_pid = win32process.GetWindowThreadProcessId (hwnd)
-          if found_pid == pid:
-            hwnds.append (hwnd)
-        return True
-
-      hwnds = []
-      win32gui.EnumWindows (callback, hwnds)
-      return hwnds
-
+        hwnds = []
+        win32gui.EnumWindows(callback, hwnds)
+        return hwnds
 
 
     def get_server():
@@ -55,18 +56,15 @@ else:
 
         p = p[0]
 
-        windows=get_hwnds_for_pid(p.pid)
-
+        windows = get_hwnds_for_pid(p.pid)
 
         windowtitles = [i for i in [str(win32gui.GetWindowText(item))
-                      for item in windows] if i != ""]
-
+                                    for item in windows] if i != ""]
 
         for title in windowtitles:
             if not title == "Space Station 13":
                 for i in servers.keys():
                     if title.startswith(i):
-
                         return servers[i]
 
             else:
@@ -77,7 +75,7 @@ else:
     while True:
         try:
             server = get_server()
-            activity = {"state": server[0], "large_text": server[0], "large_image":server[1]}
+            activity = {"state": server[0], "large_text": server[0], "large_image": server[1]}
             if len(server) == 5:
                 try:
                     if server[4] == "fetch":
@@ -86,27 +84,29 @@ else:
                         status = requests.get(server[2]).json()
 
                     if server[0] in ["Baystation 12"]:
-                        details = status["map"]+" | "+str(status["players"])+" players"
+                        details = status["map"] + " | " + str(status["players"]) + " players"
 
-                    elif server[0] in ["Goonstation #2","Goonstation RP #1", "Hippie Station", "BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station", "Yogstation 13"]:
-                        activity["details"] = status["map_name"]+" | "+str(status["players"])+" players"
+                    elif server[0] in ["Goonstation #2", "Goonstation RP #1", "Hippie Station", "BeeStation", "FTL13",
+                                       "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station",
+                                       "Yogstation 13"]:
+                        activity["details"] = status["map_name"] + " | " + str(status["players"]) + " players"
 
-                    if server[0] in ["Goonstation #2","Goonstation RP #1"]:
-                        activity["start"] = int(time.time())-int(status["elapsed"])
+                    if server[0] in ["Goonstation #2", "Goonstation RP #1"]:
+                        activity["start"] = int(time.time()) - int(status["elapsed"])
 
-                    elif server[0] in ["Hippie Station", "BeeStation", "FTL13", "Station Bagil", "Station Terry", "Station Sybil", "Citadel Station", "Yogstation 13"]:
-                        activity["start"] = int(time.time())-int(status["round_duration"])
+                    elif server[0] in ["Hippie Station", "BeeStation", "FTL13", "Station Bagil", "Station Terry",
+                                       "Station Sybil", "Citadel Station", "Yogstation 13"]:
+                        activity["start"] = int(time.time()) - int(status["round_duration"])
 
                 except Exception as E:
                     pass
 
-
-            #activity["party_id"] = "234412341"
-            #activity["join"] = "432452421342"
-            #activity["party_size"] = [1,4]
-            #activity["match"] = "23431234"
-            #activity["instance"] = True
-            #activity["spectate"] = "53242523421"
+            # activity["party_id"] = "234412341"
+            # activity["join"] = "432452421342"
+            # activity["party_size"] = [1,4]
+            # activity["match"] = "23431234"
+            # activity["instance"] = True
+            # activity["spectate"] = "53242523421"
 
             rp.set_activity(**activity)
 
