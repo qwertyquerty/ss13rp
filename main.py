@@ -83,6 +83,8 @@ else:
 
 						if status["popcap"]: #fetch popcap
 							activity["party_size"] = [int(status["players"])] + [int(status["popcap"])]
+						else: #best guess maxcap
+							activity["party_size"] = [int(status["players"])] + [90]
 
 						actualstatus = int(status["gamestate"])
 						if actualstatus == 0: #0: init, 1:lobbywait 2:start
