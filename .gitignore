@@ -1,0 +1,4 @@
+# Ignores vs code config
+.vscode/
+# Ignores local cached file
+__pycache__/
