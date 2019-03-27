@@ -37,7 +37,7 @@ Download the installer [here](https://github.com/qwertyquerty/ss13rp/raw/master/
 - [ ] Fetch server from IP instead of window title
 - [x] Add Aurora server
 - [x] Add Paradise server
-- [ ] Add CM server
+- [x] Add CM server
 - [x] Add a bunch more smaller servers
 - [ ] Finish ask to join, and join through message
 - [ ] Finish spectate for servers that support it (ghost mode)
