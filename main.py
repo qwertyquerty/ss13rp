@@ -70,7 +70,7 @@ else:
 
                     print(status)
 
-                    if server[0] in ["Hippie Station", "Yogstation 13", "BeeStation", "Bagil Station", "Terry Station", "Sybil Station", "Citadel Station", "FTL13"]:
+                    if server[0] in ["Hippie Station", "Yogstation 13", "BeeStation", "Bagil Station", "Terry Station", "Sybil Station", "Citadel Station", "FTL13", "NSV13"]:
                         activity["start"] = int(time.time())-int(status["round_duration"])
                         activity["party_id"] = str(status["round_id"]) + " " + status["map_name"] #apparently terry has NO revision
 
